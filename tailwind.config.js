@@ -29,19 +29,40 @@ module.exports = {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        'fade-out': {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
+        'flip-front': {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(180deg)' },
+        },
+        'flip-back': {
+          '0%': { transform: 'rotateY(180deg)' },
+          '100%': { transform: 'rotateY(0deg)' },
+        },
       },
       animation: {
         'fill-in': 'fill-in 1s ease-in-out 1 forwards',
         'fill-out': 'fill-out 1s ease-in-out 1 forwards',
         'slide-in': 'slide-in 1s ease-in-out 1 forwards',
         'slide-out': 'slide-out 1s ease-in-out 1 forwards',
+        'fade-in': 'fade-in 1s ease-in-out 1 forwards',
+        'fade-out': 'fade-out 1s ease-in-out 1 forwards',
+        'flip-front': 'flip-front 1s ease-in-out 1 forwards',
+        'flip-back': 'flip-back 1s ease-in-out 1 forwards',
 
       },
       transitionProperty: {
         width: "width",
         padding: "padding",
         color: "color",
-        marginLeft: "marginLeft"
+        marginLeft: "marginLeft",
+        opacity: "opacity"
       },
     },
   },
