@@ -22,12 +22,12 @@ module.exports = {
           '100%': { width: '0px' },
         },
         'slide-in': {
-          '0%': { transform: 'translateX(-100%)' },
+          '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
         'slide-out': {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         'fade-in': {
           '0%': { opacity: 0 },
@@ -49,8 +49,8 @@ module.exports = {
       animation: {
         'fill-in': 'fill-in 1s ease-in-out 1 forwards',
         'fill-out': 'fill-out 1s ease-in-out 1 forwards',
-        'slide-in': 'slide-in 1s ease-in-out 1 forwards',
-        'slide-out': 'slide-out 1s ease-in-out 1 forwards',
+        'slide-in': 'slide-in 500ms ease-in-out 1 forwards',
+        'slide-out': 'slide-out 500ms ease-in-out 1 forwards',
         'fade-in': 'fade-in 1s ease-in-out 1 forwards',
         'fade-out': 'fade-out 1s ease-in-out 1 forwards',
         'flip-front': 'flip-front 1s ease-in-out 1 forwards',

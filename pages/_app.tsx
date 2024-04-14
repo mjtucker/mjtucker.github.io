@@ -2,6 +2,7 @@
 import App from "next/app";
 import Head from "next/head";
 import React from "react";
+import NavBar from "../src/components/nav-bar/nav-bar";
 
 import "./index.css";
 
@@ -14,9 +15,8 @@ class MyApp extends App {
         <Head>
           <title>sample-next-app</title>
         </Head>
-        <div className="container">
-          <Component {...pageProps} />
-        </div>
+        <NavBar />
+        <Component {...pageProps} />
       </React.Fragment>
     );
   }

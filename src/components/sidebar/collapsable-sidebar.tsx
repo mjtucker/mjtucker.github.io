@@ -1,20 +1,25 @@
 import { useEffect } from "react";
 import { useScreenDetector } from "../../hooks/useScreenSize";
 
-const SideBar = ({
+const CollapsableSidebar = ({
   isSidebarOpen,
   setIsSidebarOpen,
 }: {
   isSidebarOpen: boolean;
   setIsSidebarOpen: any;
 }) => {
-  const { isMobile } = useScreenDetector();
-
   return (
     <div
       id="side-bar"
       className=" bg-slate-900 fixed transform -translate-x-full max-w-[400px] h-full p-8 flex flex-col text-slate-400 justify-between border-r border-r-slate-400"
     >
+      <button
+        className="absolute left-full top-2 p-4 border rounded-r-md border-slate-400 bg-slate-900"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      >
+        {isSidebarOpen ? "In" : "Out"}
+      </button>
+
       <div className="flex flex-col">
         <span className="block pb-1 text-3xl text-slate-300">MJ Tucker</span>
         <span className="text-md text-slate-300">
@@ -97,4 +102,4 @@ const SideBarItem = ({
   );
 };
 
-export default SideBar;
+export default CollapsableSidebar;
