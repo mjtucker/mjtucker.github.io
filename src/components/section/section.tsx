@@ -1,13 +1,16 @@
 import SectionHeader from "../section-header/section-header";
 
-const Section = ({ title }: { title: string }) => {
+const Section = ({ title, children }: { title: string; children: any }) => {
   return (
     <section
       id={title}
       key={`section-${title}`}
-      className={`p-10 h-full bg-slate-900 `}
+      className={`p-8 bg-slate-900 flex flex-col items-center justify-center pb-40`}
     >
-      <SectionHeader title={title} />
+      <div className="max-w-3xl w-full">
+        <SectionHeader title={title} />
+        {children}
+      </div>
     </section>
   );
 };

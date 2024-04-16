@@ -1,6 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { useScreenDetector } from "../../hooks/useScreenSize";
+import { contactSections } from "../contact-section/contact-section";
 
+const navSections = [
+  {
+    name: "about",
+  },
+  {
+    name: "experience",
+  },
+  {
+    name: "contact",
+  },
+];
+
+//todo: scroll to needs some work with mobile nav bar
 const NavBar = ({}: {}) => {
   const { isMobile, isTablet, isDesktop } = useScreenDetector();
 
@@ -16,7 +30,6 @@ const NavBar = ({}: {}) => {
     if (isMobileNavOpen) {
       mobileNavBar?.current?.classList.add("animate-slide-in");
       mobileNavBar?.current?.classList.remove("animate-slide-out");
-
       sectionContainer.classList.add("blur");
       window.document.body.style.overflow = "hidden";
     } else {
@@ -54,21 +67,13 @@ const NavBar = ({}: {}) => {
           ></img>
         </button>
         <ul className="grid justify-items-end pt-10">
-          <li className="hover:text-slate-200">
-            <a href="#about" onClick={closeNav}>
-              about
-            </a>
-          </li>
-          <li className="hover:text-slate-200">
-            <a href="#experience" onClick={closeNav}>
-              experience
-            </a>
-          </li>
-          <li className="hover:text-slate-200">
-            <a href="#contact" onClick={closeNav}>
-              contact
-            </a>
-          </li>
+          {navSections.map((item) => (
+            <li className="hover:text-slate-200">
+              <a href={`#${item.name}`} onClick={closeNav}>
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </>
@@ -77,54 +82,24 @@ const NavBar = ({}: {}) => {
       <nav className="fixed top-6 right-6 flex flex-col items-end justify-center gap-y-2 z-10 text-slate-400">
         <span className="w-[1px] h-24 d-block bg-slate-400"></span>
         <ul className="grid justify-items-end">
-          <li className="hover:text-slate-200">
-            <a href="#about">about</a>
-          </li>
-          <li className="hover:text-slate-200">
-            <a href="#experience">experience</a>
-          </li>
-          <li className="hover:text-slate-200">
-            <a href="#contact">contact</a>
-          </li>
+          {navSections.map((item) => (
+            <li className="hover:text-slate-200">
+              <a href={`#${item.name}`}>{item.name}</a>
+            </li>
+          ))}
         </ul>
       </nav>
       <div className="fixed flex bottom-6 left-3 flex-col items-center justify-center gap-y-2 z-10">
-        <div className="flex items-center justify-center rounded-full h-10 w-10 group">
-          <a
-            href="mailto:mjtucker08@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="transition-all duration-200 ease-in-out w-8 h-8 group-hover:w-10 group-hover:h-10"
-              src="/mail_icon.svg"
-            ></img>
-          </a>
-        </div>
-        <div className="flex items-center justify-center rounded-full h-10 w-10 group">
-          <a
-            href="https://github.com/mjtucker"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="transition-all duration-200 ease-in-out w-8 h-8 group-hover:w-10 group-hover:h-10"
-              src="/github-icon.svg"
-            ></img>
-          </a>
-        </div>
-        <div className="flex items-center justify-center rounded-full h-10 w-10 group">
-          <a
-            href="https://www.linkedin.com/in/maryjanetucker/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="transition-all duration-200 ease-in-out w-8 h-8 group-hover:w-10 group-hover:h-10"
-              src="/linkedin-icon.svg"
-            ></img>
-          </a>
-        </div>
+        {contactSections.map((item) => (
+          <div className="flex items-center justify-center rounded-full h-10 w-10 group">
+            <a href={item.href} target="_blank" rel="noopener noreferrer">
+              <img
+                className="transition-all duration-200 ease-in-out w-8 h-8 group-hover:w-10 group-hover:h-10"
+                src={item.image}
+              ></img>
+            </a>
+          </div>
+        ))}
         <span className="w-[1px] h-24 d-block bg-slate-400"></span>
       </div>
     </>
