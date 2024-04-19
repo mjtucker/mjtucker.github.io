@@ -106,11 +106,12 @@ export default function IntroBanner({
         <br />
         <br />
         Currently, I am working as a{" "}
-        <span className="text-green-400">
+        <span className="text-green-400 font-semibold">
           Senior Software Developer
-        </span> at{" "}
+        </span>{" "}
+        at{" "}
         <a
-          className="text-green-400"
+          className="text-green-400 hover:text-green-500 font-semibold"
           href="https://www.konradgroup.com"
           target="_blank"
         >
