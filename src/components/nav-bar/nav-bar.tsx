@@ -12,6 +12,11 @@ const navSections = [
   {
     name: "contact",
   },
+  {
+    name: "resume",
+    isLink: true,
+    docPath: "/close-x.svg", // todo update this with resume
+  },
 ];
 
 //todo: scroll to needs some work with mobile nav bar
@@ -20,6 +25,7 @@ const NavBar = ({}: {}) => {
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const mobileNavBar = useRef(null);
+  const mobileHeader = useRef(null);
 
   const closeNav = () => setIsMobileNavOpen(false);
   const openNav = () => setIsMobileNavOpen(true);
@@ -28,17 +34,53 @@ const NavBar = ({}: {}) => {
     const sectionContainer = window.document.getElementById("scroller");
 
     if (isMobileNavOpen) {
+      //slide in side nav
       mobileNavBar?.current?.classList.add("animate-slide-in");
       mobileNavBar?.current?.classList.remove("animate-slide-out");
+
+      //animate out fixed header
+      mobileHeader?.current?.classList.add("bg-transparent");
+      mobileHeader?.current?.classList.add("shadow-transparent");
+
+      //other
       sectionContainer.classList.add("blur");
       window.document.body.style.overflow = "hidden";
     } else {
+      //slide out nav bar
       mobileNavBar?.current?.classList.remove("animate-slide-in");
       mobileNavBar?.current?.classList.add("animate-slide-out");
+
+      //animate in fixed header
+      mobileHeader?.current?.classList.remove("bg-transparent");
+      mobileHeader?.current?.classList.remove("shadow-transparent");
+
+      //other
       sectionContainer.classList.remove("blur");
       window.document.body.style.overflow = "";
     }
   }, [isMobileNavOpen]);
+
+  useEffect(() => {
+    const handleClickEvent = (e) => {
+      if (mobileNavBar.current && !mobileNavBar.current.contains(e.target)) {
+        setIsMobileNavOpen(false);
+      }
+    };
+
+    const handleKeyDownEvent = (e) => {
+      if (e.key === "Escape") {
+        setIsMobileNavOpen(false);
+      }
+    };
+
+    window.document.addEventListener("mousedown", handleClickEvent);
+    window.document.addEventListener("keydown", handleKeyDownEvent);
+
+    return () => {
+      window.document.removeEventListener("mousedown", handleClickEvent);
+      window.document.removeEventListener("keydown", handleKeyDownEvent);
+    };
+  }, []);
 
   useEffect(() => {
     if (isDesktop) {
@@ -48,7 +90,10 @@ const NavBar = ({}: {}) => {
 
   return isTablet ? (
     <>
-      <div className="fixed top-0 flex justify-end w-full py-4 px-3 z-10 bg-slate-900 shadow">
+      <div
+        className="fixed top-0 flex justify-end w-full py-4 px-3 z-10 bg-slate-900 shadow transition-all"
+        ref={mobileHeader}
+      >
         <button onClick={openNav}>
           <img
             className="transition-all duration-200 ease-in-out w-8 h-8 group-hover:w-10 group-hover:h-10"
@@ -69,9 +114,15 @@ const NavBar = ({}: {}) => {
         <ul className="grid justify-items-end pt-10">
           {navSections.map((item) => (
             <li className="hover:text-slate-200">
-              <a href={`#${item.name}`} onClick={closeNav}>
-                {item.name}
-              </a>
+              {item.isLink ? (
+                <a href={item.docPath} target="_blank">
+                  {item.name}
+                </a>
+              ) : (
+                <a href={`#${item.name}`} onClick={closeNav}>
+                  {item.name}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -84,7 +135,15 @@ const NavBar = ({}: {}) => {
         <ul className="grid justify-items-end">
           {navSections.map((item) => (
             <li className="hover:text-slate-200">
-              <a href={`#${item.name}`}>{item.name}</a>
+              {item.isLink ? (
+                <a href={item.docPath} target="_blank">
+                  {item.name}
+                </a>
+              ) : (
+                <a href={`#${item.name}`} onClick={closeNav}>
+                  {item.name}
+                </a>
+              )}
             </li>
           ))}
         </ul>

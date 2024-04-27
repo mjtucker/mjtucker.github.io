@@ -41,6 +41,7 @@ export default function Home() {
         let section = document.getElementById(
           link.getAttribute("href").replace("#", "")
         );
+        if (!section) return;
         if (
           section.offsetTop <= fromTop &&
           section.offsetTop + section.offsetHeight > fromTop
