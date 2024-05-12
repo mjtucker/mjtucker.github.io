@@ -6,9 +6,9 @@ const AboutSection = ({}: {}) => {
       <div className="py-4 text-sm md:text-base">
         When I was in grade 10 I took a stab at my high school's Intro to
         Computer Science course and now flash forward a{" "}
-        <i className="text-green-400">(bit more than a couple)</i> years, I have
-        had the amazing opportunity to build software for a vast amount of
-        clients spanning many different industries.
+        <i className="text-green-400 font-semibold">(bit more than a couple)</i>{" "}
+        years, I have had the amazing opportunity to build software for a vast
+        amount of clients spanning many different industries.
         <br />
         <br />I am a dynamic and innovative front-end developer with{" "}
         <span className="text-green-400 font-semibold">4+ years</span> of
@@ -38,10 +38,10 @@ const AboutSection = ({}: {}) => {
         <br />
         Outside of work, I love to explore my other creative outlets such as
         knitting and sewing, playing around with my DJ decks, and curating{" "}
-        <i className="text-green-400">almost-too-niche</i> playlists for any and
-        every type of occasion. I also love to spend time outdoors - camping in
-        the summer, running (when it’s not -20 degrees), and playing ultimate
-        frisbee.
+        <i className="text-green-400 font-semibold">almost-too-niche</i>{" "}
+        playlists for any and every type of occasion. I also love to spend time
+        outdoors - camping in the summer, running (when it’s not -20 degrees),
+        and playing ultimate frisbee.
         <br />
         <br />
         And a couple more fun facts for the road - I speak French and I've

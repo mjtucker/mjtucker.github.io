@@ -18,10 +18,9 @@ const EducationSection = ({}: {}) => {
       </div>
       <ul className="pl-3 text-sm md:text-base mb-4">
         <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse in est ante. Neque sodales ut etiam sit. Nec feugiat nisl
-          pretium fusce id. Risus nullam eget felis eget nunc. Varius quam
-          quisque id diam.
+          Graduated Decemeber 2020. Some relevant courses taken during my
+          undergrad include, Algorithm and Data Structures, Software Engineering
+          Requirements, Database Systems, and Telecommunications Networks.
         </li>
       </ul>
     </Section>

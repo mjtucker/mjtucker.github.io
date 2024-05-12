@@ -3,31 +3,26 @@ import Section from "../section/section";
 const skillsSections = [
   {
     title: "Languages",
-    skills: [
-      "Typescript",
-      "Javascript",
-      "HTML",
-      "CSS",
-      "Sass",
-      "GraphQL",
-      "C/C++",
-    ],
+    skills: ["Typescript", "HTML5", "C/C++", "Javascript", "CSS3"],
   },
   {
     title: "Frameworks",
-    skills: ["React", "NextJS", "Tailwind", "Vue", "Jest"],
+    skills: [
+      "React",
+      "Sass",
+      "Jest",
+      "Vue",
+      "Tailwind",
+      "Google Maps API",
+      "Next.js",
+      "Boostrap",
+      "Mapbox",
+      "GraphQL",
+    ],
   },
   {
     title: "Tools",
-    skills: [
-      "Git",
-      "Storybook",
-      "Bit",
-      "Figma",
-      "Prisma",
-      "Google Maps API/Mapbox",
-      "Jira",
-    ],
+    skills: ["Git", "Storybook", "Solr", "Prisma", "Figma", "Sitecore", "Jira"],
   },
 ];
 

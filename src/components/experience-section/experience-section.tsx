@@ -1,5 +1,50 @@
 import Section from "../section/section";
 
+const firstSection = [
+  `Provided leadership within project teams through peer mentorship and
+knowledge transfers, and by spearheading the creation of team
+development processes and standards in code quality, test coverage,
+and documentation writing`,
+  `Lead internal company power hours for 100+ employees to educate and
+provide resources regarding current digital mapping technologies and
+trends, used for project training and guidance`,
+  `Conducted technical interviews with prospective entry-to-mid level
+developer candidates to assess qualifications and skills by evaluating
+technical and theoretical questions, while promoting our company's
+culture, values, and opportunities`,
+  `Lead the migration of 20+ legacy UI components to standardized Bit
+components for cohesion between micro frontends, ensuring all
+functional, design, and analytics requirements were maintained`,
+];
+
+const secondSection = [
+  `Worked on multiple client projects operating under agile
+methodologies, regularly contributing in ritual meetings while
+collaborating with project managers, designers, and developers to
+build websites for major Fintech, Real Estate, and Healthtech clients`,
+  `Wrote, developed, and maintained intuitive UI and reusable front-end
+sections of a microfrontend application, implementing key features of
+user onboarding, dashboard displays, payments and services using
+React, GraphQL, Bit, and Tailwind`,
+  `Implemented features and functionalities of a Next.js microservice
+application with React and PostgreSQL, translating designs and
+animations to a performant, responsive, and accessible full stack
+digital solution`,
+  `Tested, validated and refactored code with a focus on robustness and
+reusability to improve team productivity and code clarity and
+longevity with continuous feature enhancements and iterations`,
+];
+
+const thirdSection = [
+  `Developed, tested, and shipped production code with React within a
+  Sitecore CMS instance using HTML/CSS/Javascript`,
+  `Optimized Solr search with C++ to enhance and customize search results
+  for targeted and dynamic content discovery`,
+  `Implemented interactive markers, pop-ups, and dynamic mapping layers
+  with Mapbox’s API to create an engaging visualization of client
+  datasets through a complex and feature-rich user experience`,
+];
+
 const ExperienceSection = ({}: {}) => {
   return (
     <Section title="experience">
@@ -14,20 +59,12 @@ const ExperienceSection = ({}: {}) => {
           Jan 2024 - present
         </span>
       </div>
-      <ul className="pl-6 text-sm mb-4 list-disc">
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspRisus nullam eget felis eget nunc. Varius quam quisque id diam.
-        </li>
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse in est ante. Neque sodales ut etiam sit. Nec feugiat nisl
-          pretium
-        </li>
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse in est
-        </li>
+      <ul className="pl-6 text-sm md:text-base mb-4 list-disc">
+        {firstSection.map((text, index) => (
+          <li className="pb-2" key={`first-section-${index}`}>
+            {text}
+          </li>
+        ))}
       </ul>
       <div className="flex flex-row items-start text-slate-300">
         <span className="whitespace-nowrap">
@@ -46,18 +83,12 @@ const ExperienceSection = ({}: {}) => {
           Jul 2021 - Jan 2024
         </span>
       </div>
-      <ul className="pl-6 text-sm mb-4 list-disc">
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse in est ante. Neque sodales ut etiam sit. Nec feugiat nisl
-          pretium fusce id.
-        </li>
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse in est ante. Neque sodales ut etiam sit. Nec feugiat nisl
-          pretium fusce id. Risus nullam eget felis eget nunc. Varius quam
-          quisque id diam.
-        </li>
+      <ul className="pl-6 text-sm md:text-base mb-4 list-disc">
+        {secondSection.map((text, index) => (
+          <li className="pb-2" key={`second-section-${index}`}>
+            {text}
+          </li>
+        ))}
       </ul>
       <div className="flex flex-col md:flex-row md:items-center mb-4 text-slate-300">
         <div className="flex flex-row items-center whitespace-nowrap">
@@ -70,17 +101,12 @@ const ExperienceSection = ({}: {}) => {
           Jan 2021 - Jul 2021
         </span>
       </div>
-      <ul className="pl-6 text-sm mb-4 list-disc">
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse in est ante. Neque sodales ut etiam sit. Nec feugiat nisl
-          pretium fusce id. Risus nullam eget felis eget nunc. Varius quam
-          quisque id diam.
-        </li>
-        <li>
-          dictumst. Dictum at tempor commodo ullamcorper. Vulputate dignissim
-          suspendisse
-        </li>
+      <ul className="pl-6 text-sm md:text-base mb-4 list-disc">
+        {thirdSection.map((text, index) => (
+          <li className="pb-2" key={`third-section-${index}`}>
+            {text}
+          </li>
+        ))}
       </ul>
     </Section>
   );
