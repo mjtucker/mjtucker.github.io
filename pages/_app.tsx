@@ -13,7 +13,7 @@ class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>sample-next-app</title>
+          <title>MJ Tucker</title>
         </Head>
         <NavBar />
         <Component {...pageProps} />
