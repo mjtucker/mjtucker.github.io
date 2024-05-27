@@ -16,11 +16,18 @@ const EducationSection = ({}: {}) => {
         </div>
         <span className="hidden md:block ml-2 h-[1px] bg-green-400 w-full"></span>
       </div>
-      <ul className="pl-3 text-sm md:text-base mb-4">
+      <ul className="text-sm md:text-base mb-4">
         <li>
           Graduated Decemeber 2020. Some relevant courses taken during my
-          undergrad include, Algorithm and Data Structures, Software Engineering
-          Requirements, Database Systems, and Telecommunications Networks.
+          undergrad include - Algorithm and Data Structures, Software
+          Engineering Requirements, Database Systems, and Telecommunications
+          Networks.
+          <br />
+          <br />
+          In my time at McGill I received the Toyota Scholarship in Engineering,
+          the Faculty of Engineering Scholarship, and the W.G. McBride
+          Scholarship in Engineering - which were all awarded in recognition of
+          high academic performance.
         </li>
       </ul>
     </Section>

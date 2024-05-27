@@ -36,16 +36,18 @@ const AboutSection = ({}: {}) => {
         <br />
         <span className="block h-[1px] bg-green-400 w-full"></span>
         <br />
-        Outside of work, I love to explore my other creative outlets such as
-        knitting and sewing, playing around with my DJ decks, and curating{" "}
+        Outside of work, I love to explore creative outlets such as knitting,
+        sewing, playing around with my DJ decks, and curating{" "}
         <i className="text-green-400 font-semibold">almost-too-niche</i>{" "}
         playlists for any and every type of occasion. I also love to spend time
-        outdoors - camping in the summer, running (when it’s not -20 degrees),
-        and playing ultimate frisbee.
+        outdoors - running, biking, and playing ultimate frisbee are my current
+        heavy rotation.
         <br />
         <br />
-        And a couple more fun facts for the road - I speak French and I've
-        planted over 150,000 trees throughout Canada (ask me more about this!)
+        And a couple more fun facts for the road - I speak French, I was a
+        competivie gymnast for 10+ years, and I've planted over 150,000 trees
+        throughout Canada (you'll have to ask me more about this, it's a bit of
+        a long story!)
       </div>
     </Section>
   );

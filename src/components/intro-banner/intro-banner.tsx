@@ -80,13 +80,13 @@ export default function IntroBanner({
   //   observer.observe(window.document.getElementById("intro-banner"));
   // }, []);
 
-  useEffect(() => {
-    if (highlightedCardIndex !== null && highlightedCardIndex !== -1) {
-      stopRotatingInterval();
-    } else {
-      startRotatingInterval(rotatingCardIndex); // todo readd this when wanting to put carousel on again
-    }
-  }, [highlightedCardIndex]);
+  // useEffect(() => {
+  //   if (highlightedCardIndex !== null && highlightedCardIndex !== -1) {
+  //     stopRotatingInterval();
+  //   } else {
+  //     startRotatingInterval(rotatingCardIndex); // todo readd this when wanting to put carousel on again
+  //   }
+  // }, [highlightedCardIndex]);
 
   return (
     <div
@@ -98,11 +98,12 @@ export default function IntroBanner({
         (or mary jane for long)
       </div>
       <div className="text-lg text-slate-400 text-center max-w-2xl">
-        I am software developer passionate about creating cool things on the
+        I am a software developer passionate about creating cool things on the
         internet, and making them look{" "}
         <span className=" text-green-400 font-semibold">good</span>. I thrive in
         collaborative environments, love (and hate) tackling a tricky bug, and
-        occasionally enjoy building a carousel.
+        genuinely enjoy navigating all aspects of the software development
+        lifecycle.
         <br />
         <br />
         Currently, I am working as a{" "}
@@ -120,28 +121,9 @@ export default function IntroBanner({
         .
         <br /> Feel free to stick around and check out more below!
       </div>
-      <a
-        className="mt-7 animate-pulse"
-        // onClick={() => {
-        //   //animate out intro bar
-        //   setIsSidebarOpen(true);
-        // }}
-        href="#about"
-      >
+      <a className="mt-7 animate-pulse" href="#about">
         <img className=" w-6 h-6" src="/down-arrow.svg"></img>
       </a>
-      {/* {!isMobile &&
-        popupCardFeatures.map((card, i) => (
-          <FloatingCard
-            card={card}
-            isCurrent={i === rotatingCardIndex}
-            highlightedCardIndex={highlightedCardIndex}
-            onCardClick={() => {
-              setHighlightedCardIndex(i);
-            }}
-            setHighlightedCardIndex={setHighlightedCardIndex}
-          />
-        ))} */}
     </div>
   );
 }
