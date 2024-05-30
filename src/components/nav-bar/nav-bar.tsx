@@ -15,11 +15,10 @@ const navSections = [
   {
     name: "resume",
     isLink: true,
-    docPath: "/close-x.svg", // todo update this with resume
+    docPath: "/Resume_Mary_Jane_Tucker.pdf",
   },
 ];
 
-//todo: scroll to needs some work with mobile nav bar
 const NavBar = ({}: {}) => {
   const { isMobile, isTablet, isDesktop } = useScreenDetector();
 

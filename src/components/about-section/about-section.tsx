@@ -47,7 +47,7 @@ const AboutSection = ({}: {}) => {
         And a couple more fun facts for the road - I speak French, I was a
         competivie gymnast for 10+ years, and I've planted over 150,000 trees
         throughout Canada (you'll have to ask me more about this, it's a bit of
-        a long story!)
+        a long story)
       </div>
     </Section>
   );
