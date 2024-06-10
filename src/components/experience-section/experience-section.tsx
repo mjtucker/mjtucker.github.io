@@ -5,14 +5,14 @@ const firstSection = [
 knowledge transfers, and by spearheading the creation of team
 development processes and standards in code quality, test coverage,
 and documentation writing`,
-  `Lead internal company power hours for 100+ employees to educate and
+  `Led internal company power hours for 100+ employees to educate and
 provide resources regarding current digital mapping technologies and
 trends, used for project training and guidance`,
   `Conducted technical interviews with prospective entry-to-mid level
 developer candidates to assess qualifications and skills by evaluating
 technical and theoretical questions, while promoting our company's
 culture, values, and opportunities`,
-  `Lead the migration of 20+ legacy UI components to standardized Bit
+  `Led the migration of 20+ legacy UI components to standardized Bit
 components for cohesion between micro frontends, ensuring all
 functional, design, and analytics requirements were maintained`,
 ];

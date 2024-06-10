@@ -17,7 +17,7 @@ const EducationSection = ({}: {}) => {
         <span className="hidden md:block ml-2 h-[1px] bg-green-400 w-full"></span>
       </div>
       <ul className="text-sm md:text-base mb-4">
-        <li>
+        <li key="education-1">
           Graduated Decemeber 2020. Some relevant courses taken during my
           undergrad include - Algorithm and Data Structures, Software
           Engineering Requirements, Database Systems, and Telecommunications
